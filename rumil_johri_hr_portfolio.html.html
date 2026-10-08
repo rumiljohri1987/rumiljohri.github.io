@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rumil Johri | HR & HRIS Professional</title>
+<style>
+:root{--navy:#17324d;--blue:#2f6f9f;--light:#f5f8fb;--text:#243746;--muted:#617383;--white:#fff;--gold:#d6a84f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.65;background:#fff}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid #e5ebf0;padding:14px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;color:var(--navy);font-size:1.15rem}
+nav a{color:var(--text);text-decoration:none;margin-left:24px;font-size:.92rem}
+nav a:hover{color:var(--blue)}
+.hero{background:linear-gradient(135deg,#edf5fa,#fff);padding:90px 8% 85px;display:grid;grid-template-columns:1.4fr .8fr;gap:60px;align-items:center}
+.badge{display:inline-block;background:#e2eef6;color:var(--blue);padding:7px 13px;border-radius:30px;font-weight:700;font-size:.8rem;margin-bottom:18px}
+h1{font-size:clamp(2.5rem,5vw,4.7rem);line-height:1.05;color:var(--navy);margin-bottom:18px}
+.hero h2{font-size:1.35rem;color:var(--blue);font-weight:600;margin-bottom:20px}
+.hero p{max-width:700px;color:var(--muted);font-size:1.05rem}
+.buttons{margin-top:30px}
+.btn{display:inline-block;text-decoration:none;padding:12px 20px;border-radius:8px;margin-right:10px;font-weight:700}
+.primary{background:var(--navy);color:white}.secondary{border:1px solid #b9c9d5;color:var(--navy);background:#fff}
+.profile-card{background:white;border:1px solid #dce6ed;border-radius:20px;padding:32px;box-shadow:0 18px 45px rgba(23,50,77,.10)}
+.profile-card .circle{width:100px;height:100px;border-radius:50%;background:#e7f0f6;display:grid;place-items:center;color:var(--navy);font-size:2rem;font-weight:800;margin-bottom:20px}
+section{padding:75px 8%}
+.section-head{max-width:760px;margin-bottom:38px}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;color:var(--blue);font-weight:800;font-size:.75rem}
+h2{font-size:2.2rem;color:var(--navy);margin:8px 0 12px}
+.section-head p{color:var(--muted)}
+.about{background:var(--light)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white;border:1px solid #e1e9ef;border-radius:15px;padding:25px}
+.card h3{color:var(--navy);margin-bottom:10px}
+.card p,.card li{color:var(--muted);font-size:.95rem}
+.card ul{padding-left:19px}
+.timeline{max-width:900px;border-left:3px solid #dbe8f0;margin-left:10px}
+.timeline-item{padding:0 0 35px 30px;position:relative}
+.timeline-item:before{content:"";position:absolute;left:-9px;top:6px;width:15px;height:15px;background:var(--blue);border-radius:50%;border:3px solid white;box-shadow:0 0 0 2px #cbdde8}
+.date{font-size:.8rem;color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.project{background:#fff;border:1px solid #dfe8ee;border-radius:16px;padding:28px}
+.project h3{color:var(--navy);font-size:1.25rem}
+.project .tag{display:inline-block;background:#edf4f8;color:var(--blue);padding:4px 9px;border-radius:20px;font-size:.75rem;margin:10px 4px 14px 0}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skill{padding:9px 13px;background:#edf4f8;border-radius:8px;color:var(--navy);font-weight:700;font-size:.9rem}
+.contact{background:var(--navy);color:white;text-align:center}
+.contact h2{color:white}.contact p{color:#d9e5ed;max-width:650px;margin:0 auto 25px}
+.contact .btn{background:white;color:var(--navy)}
+footer{background:#10283d;color:#b9cbd8;text-align:center;padding:22px;font-size:.85rem}
+@media(max-width:800px){nav{display:block;text-align:center}.logo{margin-bottom:8px}nav a{margin:0 7px;font-size:.8rem}.hero{grid-template-columns:1fr;padding-top:60px}.grid{grid-template-columns:1fr}section{padding:55px 6%}}
+</style>
+
+<style id="contact-button-styles">
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 18px;
+}
+.contact-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  color: inherit;
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.contact-button:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.14);
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+}
+.contact-button .contact-icon {
+  font-size: 1.25rem;
+}
+.contact-button strong,
+.contact-button small {
+  display: block;
+}
+.contact-button small {
+  margin-top: 3px;
+  opacity: .82;
+}
+@media (max-width: 600px) {
+  .contact-button { width: 100%; }
+}
+</style>
+
+
+<style>
+.contact-buttons{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px}
+.contact-button{display:flex;align-items:center;gap:12px;padding:14px 20px;border-radius:12px;text-decoration:none!important;background:#fff;color:#172033!important;border:1px solid rgba(0,0,0,.12);box-shadow:0 5px 16px rgba(0,0,0,.08);transition:.2s ease}
+.contact-button:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.14)}
+.contact-icon{font-size:22px;line-height:1}
+.contact-button strong,.contact-button small{display:block}
+.contact-button small{margin-top:3px;opacity:.75}
+@media(max-width:600px){.contact-button{width:100%;box-sizing:border-box}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">RUMIL JOHRI</div>
+  <div>
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a>
+    <a href="#skills">Skills</a><a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <span class="badge">HR • HRIS • Recruitment • Workday</span>
+    <h1>HR experience. Technology skills. Ready for what's next.</h1>
+    <h2>HR & Recruitment Professional | HRIS | Workday HCM</h2>
+    <p>
+      MBA in HR Management & Marketing with experience across recruitment, healthcare staffing,
+      operations, digital marketing, candidate coordination, onboarding, and compliance.
+      Currently building deeper expertise in Workday HCM and HR technology.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="#projects">View My Projects</a>
+      <a class="btn secondary" href="#contact">Contact Me</a>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="circle">RJ</div>
+    <h3>Career Focus</h3>
+    <p>Junior Workday HCM Consultant • HRIS Analyst • HR Service Desk • Recruiting Coordinator</p>
+    <br>
+    <strong>Education</strong>
+    <p>MBA — Human Resources</p>
+  </div>
+</header>
+
+<section id="about" class="about">
+  <div class="section-head">
+    <span class="eyebrow">About Me</span>
+    <h2>A thoughtful return to HR</h2>
+    <p>
+      I am returning to the workforce with a strong foundation in Human Resources and recruitment,
+      combined with current hands-on learning in HR technology. My goal is to help organizations
+      deliver efficient employee experiences through people, process, and technology.
+    </p>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Recruitment & Staffing</h3><p>Recruitment coordination, candidate sourcing and screening, interview scheduling, onboarding, placement follow-up, and ATS/CRM records.</p></div>
+    <div class="card"><h3>Operations & Marketing</h3><p>Cross-functional coordination, digital marketing, SEO, email campaigns, recruitment marketing, mentoring, and performance improvement.</p></div>
+    <div class="card"><h3>HR Technology</h3><p>Developing practical knowledge of Workday HCM, HRIS concepts, business processes, reporting, HR service delivery, and AI-enabled HR workflows.</p></div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-head">
+    <span class="eyebrow">Experience</span>
+    <h2>Professional Journey</h2>
+    <p>A chronological view of my experience across recruitment, HR, operations, client services, and staffing.</p>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="date">2012–2013 • Noida, India</div>
+      <h3>Recruitment Executive — IBM</h3>
+      <p>
+        Joined the IBM recruitment team as an intern and, based on performance and dedication,
+        received an opportunity to continue with the team. Supported recruitment for technical
+        and support roles, campus outreach, candidate communication, onboarding activities,
+        and candidate experience initiatives.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">Apr 2013–Jan 2014 • Greater Delhi Area</div>
+      <h3>Executive Trainee – Operations & HR — India Exposition Mart Limited</h3>
+      <p>
+        Supported senior leaders across Operations and HR, coordinating schedules, documentation,
+        communication, interviews, candidate interactions, and high-volume hiring logistics.
+      </p>
+      <ul>
+        <li>Coordinated interviews and candidate interactions while keeping high-volume scheduling organized and on track.</li>
+        <li>Supported development of HR and operations policy manuals, helping create clearer and more consistent processes.</li>
+        <li>Supported onboarding activities and helped new hires navigate organizational processes with greater confidence.</li>
+        <li>Prepared presentations and reports that translated operational data into actionable insights for leadership.</li>
+        <li>Developed strong foundations in organization, communication, stakeholder coordination, and continuous process improvement.</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">Jan 2014–Apr 2015 • India</div>
+      <h3>Client Services & Account Operations Executive — India Exposition Mart Limited</h3>
+      <p>
+        Served as a key point of contact for internal teams and external stakeholders, handling
+        requests, issues, and escalations with clear communication, accurate documentation, and
+        strong service delivery.
+      </p>
+      <ul>
+        <li>Coordinated daily workflows across Operations, Finance, HR, and Administration while maintaining accurate documentation.</li>
+        <li>Designed and maintained Excel and Google Sheets dashboards to track SLAs and performance metrics, improving reporting accuracy by 30% and reducing turnaround time by 25%.</li>
+        <li>Built stakeholder relationships through proactive communication and structured follow-ups, contributing to a 20% improvement in satisfaction scores.</li>
+        <li>Supported client-facing events and executive meetings, coordinating materials, logistics, and communications.</li>
+        <li>Identified operational gaps and recommended process improvements that reduced administrative bottlenecks by 15%.</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">2022–2023 • Remote</div>
+      <h3>Recruitment Coordinator — Healthcare Staffing Partners</h3>
+      <p>
+        Supported full-cycle recruitment for clinical and technical roles across multiple states.
+        Coordinated candidate communication, interviews, onboarding, credentialing, and compliance
+        documentation including HIPAA and licensure verification. Maintained ATS records using
+        Bullhorn and Recruit CRM and supported smooth placement follow-up with candidates and hiring managers.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">Career Return</div>
+      <h3>Family Responsibilities & Relocation</h3>
+      <p>
+        Took time away from formal employment for family responsibilities and relocation.
+        Now actively preparing to return to the workforce with updated HR, HRIS, Workday,
+        and technology skills.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="about">
+  <div class="section-head">
+    <span class="eyebrow">Portfolio</span>
+    <h2>Hands-on HR & Workday Projects</h2>
+    <p>Practice and simulated projects created to demonstrate job-ready knowledge and problem-solving.</p>
+  </div>
+  <div class="grid">
+    <div class="project">
+      <h3>Workday HCM Employee Lifecycle</h3>
+      <span class="tag">Workday HCM</span><span class="tag">HRIS</span>
+      <p>Simulated employee lifecycle covering Hire, Onboarding, Job Change, Transfer, and Termination.</p>
+      <ul><li>Supervisory Organizations</li><li>Job Profiles & Positions</li><li>Business Processes</li><li>HR reporting concepts</li></ul>
+    </div>
+    <div class="project">
+      <h3>HR Service Desk</h3>
+      <span class="tag">ServiceNow</span><span class="tag">HR Operations</span>
+      <p>Practice scenarios for handling employee HR requests through a service-desk model.</p>
+      <ul><li>Case categorization</li><li>Prioritization & escalation</li><li>SLA concepts</li><li>Knowledge articles</li></ul>
+    </div>
+    <div class="project">
+      <h3>Recruitment Analytics</h3>
+      <span class="tag">Recruiting</span><span class="tag">Excel</span>
+      <p>Practice recruitment dashboard focused on candidate pipeline and recruiting performance.</p>
+      <ul><li>Time-to-fill</li><li>Source-of-hire</li><li>Candidate funnel</li><li>Recruitment metrics</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-head">
+    <span class="eyebrow">Capabilities</span>
+    <h2>Skills & Areas of Development</h2>
+  </div>
+  <div class="skills">
+    <span class="skill">Recruitment</span><span class="skill">Talent Acquisition</span>
+    <span class="skill">Candidate Sourcing</span><span class="skill">ATS/CRM</span><span class="skill">Bullhorn</span>
+    <span class="skill">Recruit CRM</span><span class="skill">HR Operations</span><span class="skill">HRIS</span>
+    <span class="skill">Workday HCM</span><span class="skill">Employee Lifecycle</span><span class="skill">Onboarding</span>
+    <span class="skill">Compliance Documentation</span><span class="skill">HR Service Desk</span>
+    <span class="skill">ServiceNow Fundamentals</span><span class="skill">SEO & Email Marketing</span>
+    <span class="skill">Stakeholder Communication</span><span class="skill">Agile</span><span class="skill">AI for HR</span>
+  </div>
+</section>
+
+<section class="about">
+  <div class="section-head">
+    <span class="eyebrow">Education & Development</span>
+    <h2>Education & Professional Development</h2>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Master of Business Administration</h3><p>HR Management & Marketing — Amity Business School, Jaipur, India</p></div>
+    <div class="card"><h3>Workday HCM</h3><p>Structured learning and hands-on practice in core HCM concepts, employee lifecycle processes, business processes, and HRIS concepts.</p></div>
+    <div class="card"><h3>Professional Development</h3><p>HIPAA Compliance Training (2023), Bullhorn ATS/CRM Admin Certification in progress, and ongoing HR technology development.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Let's Connect</h2>
+  <p>
+    I am open to opportunities in HR, recruiting, HRIS, Workday HCM, and HR service delivery.
+    I would welcome the opportunity to discuss how my background and current training can contribute to your team.
+  </p>
+  <div class="contact-buttons">
+    <a class="contact-button" href="mailto:emailtorumil@gmail.com">
+      <span class="contact-icon">✉</span>
+      <span><strong>Email Me</strong><small>emailtorumil@gmail.com</small></span>
+    </a>
+    <a class="contact-button" href="tel:+15025939140">
+      <span class="contact-icon">☎</span>
+      <span><strong>Call Me</strong><small>502-593-9140</small></span>
+    </a>
+  </div>
+</section>
+
+<footer>© 2026 Rumil Johri • HR & HRIS Professional Portfolio</footer>
+</body>
+</html>
